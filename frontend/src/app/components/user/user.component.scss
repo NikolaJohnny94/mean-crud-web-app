@@ -1,0 +1,14 @@
+.card-container {
+  min-height: 80vh;
+  .persons-info-card {
+    border: 2px solid grey;
+    padding: 4rem;
+    border-radius: 10px;
+    p {
+      cursor: pointer;
+    }
+  }
+  .icons {
+    margin-right: 0.5rem;
+  }
+}

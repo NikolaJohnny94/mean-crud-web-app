@@ -1,0 +1,20 @@
+<ng-container *ngIf="user">
+  <div class="card-container d-flex align-items-center justify-content-center">
+    <div class="persons-info-card bg-dark text-light h5 m-0">
+      <p title="User's name">
+        <fa-icon class="icons" [icon]="personFlag"></fa-icon
+        >{{ user.firstname }}
+        {{ user.lastname }}
+      </p>
+      <p title="User's email address">
+        <fa-icon class="icons" [icon]="envelopeIcon"></fa-icon>{{ user.email }}
+      </p>
+      <p title="User's country">
+        <fa-icon class="icons" [icon]="flagIcon"></fa-icon>{{ user.country }}
+      </p>
+      <p title="User's city">
+        <fa-icon class="icons" [icon]="cityIcon"></fa-icon>{{ user.city }}
+      </p>
+    </div>
+  </div>
+</ng-container>

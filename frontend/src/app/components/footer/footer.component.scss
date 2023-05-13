@@ -1,0 +1,36 @@
+footer {
+  p {
+    height: 57px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    .social-media-icon {
+      margin-left: 10px;
+      font-size: 20px;
+      &:nth-child(2) {
+        margin-right: 10px;
+      }
+    }
+
+    .github {
+      color: #000 !important;
+    }
+
+    .codepen {
+      color: #fff;
+      margin-right: 5px;
+    }
+
+    .linkedin {
+      color: #0077b5;
+    }
+
+    .twitter {
+      color: #1da1f2;
+    }
+  }
+}

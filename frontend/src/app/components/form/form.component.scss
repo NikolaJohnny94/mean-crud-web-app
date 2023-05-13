@@ -1,0 +1,10 @@
+form {
+  margin-top: 2.5% !important;
+  .mb-3 {
+    input {
+      &::placeholder {
+        text-align: center !important;
+      }
+    }
+  }
+}

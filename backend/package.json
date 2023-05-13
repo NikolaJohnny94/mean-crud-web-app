@@ -1,0 +1,30 @@
+{
+  "name": "basic_mevn_crud_",
+  "version": "1.0.0",
+  "description": "MEVN CRUD Web App",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "SET NODE_ENV=production & node server",
+    "dev": "nodemon server"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.2.0",
+    "express-mongo-sanitize": "^2.2.0",
+    "helmet": "^5.0.2",
+    "hpp": "^0.2.3",
+    "js-yaml": "^4.1.0",
+    "mongoose": "^6.0.12",
+    "slugify": "^1.6.5",
+    "swagger-ui-express": "^4.3.0",
+    "xss-clean": "^0.1.1"
+  },
+  "devDependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.15"
+  }
+}

@@ -1,0 +1,95 @@
+openapi: 3.0.0
+info:
+  title: Users APi
+  version: 1.0.0
+servers:
+  - url: http://localhost:5000
+paths:
+  /api/v1/users/:
+    get:
+      tags:
+        - General
+      summary: Get All Users
+      description: Get all users from the database
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    post:
+      tags:
+        - General
+      summary: Create New User
+      description: Add new user to the database
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                firstname: Beth
+                lastname: Smith
+                email: beth17smith@mern.com
+                country: Canada
+                city: Vancouver
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1/users/{id}:
+    get:
+      tags:
+        - General
+      summary: Get Single User
+      description: Get specific user by ID
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    delete:
+      tags:
+        - General
+      summary: Delete User
+      description: Delete user from the databsae
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    put:
+      tags:
+        - General
+      summary: Update User
+      description: Update existing user
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                firstname: New User
+      parameters:
+        - name: id
+          in: path
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
