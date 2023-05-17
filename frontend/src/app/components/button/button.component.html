@@ -1,0 +1,7 @@
+<button
+  (click)="onButtonClick()"
+  class="btn text-white"
+  [ngClass]="bootstrapColor ? 'btn-' + bootstrapColor : 'btn-primary'"
+>
+  {{ buttonText }}
+</button>

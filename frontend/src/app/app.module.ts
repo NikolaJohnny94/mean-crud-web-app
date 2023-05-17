@@ -13,6 +13,7 @@ import { UserComponent } from './components/user/user.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ModalComponent } from './components/modal/modal.component';
 import { AlertComponent } from './components/alert/alert.component';
+import { ButtonComponent } from './components/button/button.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { AlertComponent } from './components/alert/alert.component';
     UserComponent,
     ModalComponent,
     AlertComponent,
+    ButtonComponent,
   ],
   imports: [
     BrowserModule,

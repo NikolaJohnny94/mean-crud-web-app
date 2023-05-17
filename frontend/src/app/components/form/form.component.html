@@ -66,6 +66,10 @@
     />
   </div>
   <div class="d-flex justify-content-center">
-    <button (click)="onSubmit()" class="btn btn-danger">Submit</button>
+    <app-button
+      (onClick)="onSubmit()"
+      [buttonText]="editForm ? updateButtonText : submitButtonText"
+      [bootstrapColor]="editForm ? 'info' : 'success'"
+    ></app-button>
   </div>
 </form>
