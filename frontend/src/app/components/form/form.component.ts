@@ -3,9 +3,10 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormGroup, FormControl } from '@angular/forms';
 import { SharedService } from 'src/app/services/shared/shared.service';
+import { ToastType } from 'src/app/enums/toast.enum';
 import type { User } from 'src/app/types/user/User.type';
 import type { SingleUserResponse } from 'src/app/types/response/SingleUserResponse.type';
-import { ToastType } from 'src/app/enums/toast.enum';
+import { SUBMIT_BUTTON_TEXT, UPDATE_BUTTON_TEXT } from 'src/constants';
 
 @Component({
   selector: 'app-form',
@@ -13,6 +14,8 @@ import { ToastType } from 'src/app/enums/toast.enum';
   styleUrls: ['./form.component.scss'],
 })
 export class FormComponent implements OnInit {
+  submitButtonText: string = SUBMIT_BUTTON_TEXT;
+  updateButtonText: string = UPDATE_BUTTON_TEXT;
   currentRoute!: string;
   editForm: boolean = false;
   user!: User;
