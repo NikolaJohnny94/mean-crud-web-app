@@ -68,8 +68,9 @@
   <div class="d-flex justify-content-center">
     <app-button
       (onClick)="onSubmit()"
-      [buttonText]="editForm ? updateButtonText : submitButtonText"
+      [text]="editForm ? updateButtonText : submitButtonText"
       [bootstrapColor]="editForm ? 'info' : 'success'"
+      [title]="editForm ? 'Edit user' : 'Create new user'"
     ></app-button>
   </div>
 </form>

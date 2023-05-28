@@ -15,6 +15,17 @@
       <p title="User's city">
         <fa-icon class="icons" [icon]="cityIcon"></fa-icon>{{ user.city }}
       </p>
+      <app-button
+        class="user-page-go-back-button"
+        (onClick)="goToPreviousPage()"
+        [text]="goBackButtonText"
+        [icon]="arrowLeftIcon"
+        title="Go to previous page"
+        display="flex"
+        marginX="auto"
+        marginTop="30"
+        bootstrapColor="danger"
+      ></app-button>
     </div>
   </div>
 </ng-container>

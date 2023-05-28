@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import {
   IconDefinition,
   faUserPlus,
@@ -35,7 +36,8 @@ export class TableComponent implements OnInit {
 
   constructor(
     private apiService: ApiService,
-    private sharedService: SharedService
+    private sharedService: SharedService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {

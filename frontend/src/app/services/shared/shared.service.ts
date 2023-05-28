@@ -23,6 +23,8 @@ export class SharedService {
   userCreated: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
   userUpdated: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
+  currentRoute: BehaviorSubject<string> = new BehaviorSubject<string>('');
+
   constructor() {}
 
   confirmUserDeletion(): Observable<boolean> {
@@ -63,5 +65,9 @@ export class SharedService {
 
   getUserUpdated(): Observable<boolean> {
     return this.userUpdated.asObservable();
+  }
+
+  getCurrentRoute(): Observable<string> {
+    return this.currentRoute.asObservable();
   }
 }
