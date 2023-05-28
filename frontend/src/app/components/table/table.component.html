@@ -18,7 +18,7 @@
         <a
           class="text-danger fw-bold hover user-page-link"
           [routerLink]="['/user', user._id]"
-          title="Visit {{ user.firstname }} page"
+          title="About {{ user.firstname }} {{ user.lastname }}"
           >{{ user.firstname }}</a
         >
       </td>
@@ -31,7 +31,7 @@
           ><fa-icon
             class="edit-user-icon"
             [icon]="editUserIcon"
-            title="Edit User"
+            title="Edit {{ user.firstname }} {{ user.lastname }}"
           ></fa-icon
         ></a>
       </td>
@@ -42,7 +42,7 @@
           data-bs-toggle="modal"
           data-bs-target="#exampleModal"
           (click)="deleteUser(user._id)"
-          title="Delete User"
+          title="Delete {{ user.firstname }} {{ user.lastname }}"
         ></fa-icon>
       </td>
     </tr>
@@ -59,15 +59,15 @@
   >
     <div class="toast-header">
       <strong class="me-auto">
-        <ng-container *ngIf="toast.type === 'CREATED'">
+        <ng-container *ngIf="toast.type === 'Created'">
           New user created
           <fa-icon [icon]="addNewUserIcon" class="text-success"></fa-icon>
         </ng-container>
-        <ng-container *ngIf="toast.type === 'UPDATED'">
+        <ng-container *ngIf="toast.type === 'Updated'">
           User updated
           <fa-icon [icon]="editUserIcon" class="text-info"></fa-icon>
         </ng-container>
-        <ng-container *ngIf="toast.type === 'DELETED'">
+        <ng-container *ngIf="toast.type === 'Deleted'">
           User Deleted
           <fa-icon [icon]="deleteUserIcon" class="text-danger"></fa-icon>
         </ng-container>
@@ -81,17 +81,17 @@
       ></button>
     </div>
     <div class="toast-body">
-      <ng-container *ngIf="toast.type === 'CREATED'"
+      <ng-container *ngIf="toast.type === 'Created'"
         >New user
         <strong class="text-success">{{ createdUserEmail }}</strong>
         successfully created!
       </ng-container>
-      <ng-container *ngIf="toast.type === 'UPDATED'">
+      <ng-container *ngIf="toast.type === 'Updated'">
         User
         <strong class="text-info">{{ updatedUserEmail }}</strong>
         successfully updated!
       </ng-container>
-      <ng-container *ngIf="toast.type === 'DELETED'">
+      <ng-container *ngIf="toast.type === 'Deleted'">
         User <strong class="text-danger">{{ deletedUserEmail }}</strong>
         successfully deleted!
       </ng-container>

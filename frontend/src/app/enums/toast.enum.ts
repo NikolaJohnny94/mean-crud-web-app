@@ -1,5 +1,5 @@
 export enum ToastType {
-  CREATED = 'CREATED',
-  UPDATED = 'UPDATED',
-  DELETED = 'DELETED',
+  CREATED = 'Created',
+  UPDATED = 'Updated',
+  DELETED = 'Deleted',
 }

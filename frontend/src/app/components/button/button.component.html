@@ -1,7 +1,14 @@
 <button
   (click)="onButtonClick()"
   class="btn text-white"
-  [ngClass]="bootstrapColor ? 'btn-' + bootstrapColor : 'btn-primary'"
+  [ngClass]="[
+    bootstrapColor ? 'btn-' + bootstrapColor : 'btn-primary',
+    display ? 'd-' + display : '',
+    marginX ? 'mx-' + marginX : ''
+  ]"
+  [ngStyle]="{ 'margin-top.px': marginTop }"
+  [title]="title ? title : ''"
 >
-  {{ buttonText }}
+  <fa-icon *ngIf="icon" [icon]="icon" class="go-back-button-icon"></fa-icon>
+  {{ text }}
 </button>
